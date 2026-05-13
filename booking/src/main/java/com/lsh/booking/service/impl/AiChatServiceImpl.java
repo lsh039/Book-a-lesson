@@ -15,16 +15,13 @@ public class AiChatServiceImpl implements AiChatService {
 
     private final ChatClient chatClient;
 
-    private final ICourseService courseService;
 
-    private final IReservationService reservationService;
 
     public AiChatServiceImpl(ChatClient.Builder chatClientBuilder,
                              ChatMemory chatMemory,
-                             ReservationTool reservationTool,
-                             ICourseService courseService, IReservationService reservationService) {
-        this.courseService = courseService;
-        this.reservationService = reservationService;
+                             ReservationTool reservationTool
+                              ) {
+
 
 
         this.chatClient = chatClientBuilder
